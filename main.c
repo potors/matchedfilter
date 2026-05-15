@@ -62,7 +62,7 @@ int main() {
             DrawText("1", w/2, 2, 18, LIGHTGRAY); // graph y (1.0)
             DrawText("-1", w/2, h - 18, 18, LIGHTGRAY); // graph -y (-1.0)
 
-            #define LEN 0x320
+            #define LEN 0x400
 
             static float l[LEN];
             static float r[LEN];
@@ -85,9 +85,9 @@ int main() {
                     x, h/2 * (1.0f - noisy),
                     ColorAlpha(noisy > 0 ? GREEN : RED, 0.3));
 
-                DrawCircle(x, h/2 * (1.0f + l[i]), 2, BLUE);
-                DrawCircle(x, h/2 * (1.0f + r[i]), 2, RED);
-                DrawCircle(x, h/2 * (1.0f + n[i]), 2, LIME);
+                DrawCircle(x, h/2 * (1.0f + l[i]), 1, BLUE);
+                DrawCircle(x, h/2 * (1.0f + r[i]), 1, RED);
+                DrawCircle(x, h/2 * (1.0f + n[i]), 1, LIME);
             }
 
             float m = match(l, r, LEN);
